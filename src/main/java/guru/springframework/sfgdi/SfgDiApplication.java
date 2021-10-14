@@ -15,6 +15,10 @@ public class SfgDiApplication {
 		VehicleController carController = (VehicleController) ctx.getBean("carController");
 		System.out.println(carController.sayMyType());
 
+		PetController petController = ctx.getBean("petController", PetController.class);
+		System.out.println("--- The Best Pet is ---");
+		System.out.println(petController.whichPetIsTheBest());
+
 		I18nController i18nController = (I18nController) ctx.getBean("i18nController");
 		System.out.println(i18nController.sayHello());
 
